@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StrawberryMoonRabbit - Free Worldwide Show Streaming</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Comfortaa', cursive, sans-serif;
+      background: linear-gradient(135deg, #fdf6ef, #e4d0f4);
+      color: #4a3c6b;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    a.show-card {
+      text-decoration: none;
+      color: inherit;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .background-animals {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .animal {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.4;
+      user-select: none;
+    }
+
+    .a1 { top: 10%; left: 5%; }
+    .a2 { top: 25%; left: 80%; }
+    .a3 { top: 50%; left: 30%; }
+    .a4 { top: 70%; left: 60%; }
+    .a5 { top: 85%; left: 10%; }
+    .a6 { top: 40%; left: 75%; }
+    .a7 { top: 15%; left: 50%; }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      background: #f47c9c;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(244, 124, 156, 0.4);
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      user-select: none;
+    }
+
+    header span {
+      color: #fff5f8;
+      font-size: 3rem;
+      margin-left: 0.3rem;
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 600;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #6b4974;
+    }
+
+    p {
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      line-height: 1.5;
+      color: #574a6d;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .tab-button {
+      background-color: #f47c9c;
+      border: none;
+      color: white;
+      font-size: 1rem;
+      padding: 0.6rem 1.2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .tab-button:hover {
+      background-color: #e36489;
+    }
+
+    .streaming-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+      gap: 1.8rem;
+      margin-top: 2rem;
+    }
+
+    .show-card {
+      background: white;
+      border-radius: 18px;
+      box-shadow: 0 4px 8px rgba(180, 142, 165, 0.3);
+      padding: 1rem;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .show-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(244, 124, 156, 0.5);
+    }
+
+    .show-poster {
+      border-radius: 15px;
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+
+    .show-title {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #c74084;
+      margin-bottom: 0.3rem;
+    }
+
+    .show-info {
+      font-size: 0.9rem;
+      color: #886787;
+    }
+
+    footer {
+      background: #f47c9c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      font-size: 0.9rem;
+      user-select: none;
+    }
+
+    .logo-emoji {
+      display: inline-block;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Background Animals -->
+  <div class="background-animals">
+    <div class="animal a1">🐱</div>
+    <div class="animal a2">🐰</div>
+    <div class="animal a3">🦊</div>
+    <div class="animal a4">🐻</div>
+    <div class="animal a5">🐥</div>
+    <div class="animal a6">🐭</div>
+    <div class="animal a7">🦄</div>
+    <div class="animal a8">🦄</div>
+  </div>
+
+  <header>
+    StrawberryMoonRabbit <span class="logo-emoji">🌙🐰🍓</span>
+  </header>
+
+  <main>
+    <h2>Welcome to StrawberryMoonRabbit!</h2>
+    <p>
+      Stream your favorite shows from all around the world for free, anytime and anywhere. No borders, just endless entertainment under the Strawberry Moon.
+    </p>
+
+    <!-- Category Tabs -->
+    <div class="tabs">
+  <a href="anime.html"><button class="tab-button">Anime</button></a>
+  <a href="kdrama.html"><button class="tab-button">K-Drama</button></a>
+  <a href="cdrama.html"><button class="tab-button">C-Drama</button></a>
+  <a href="jdrama.html"><button class="tab-button">J-Drama</button></a>
+  </div>
+
+
+    <!-- Shows Section -->
+    <section class="streaming-section">
+      <a href="mymasterhasnotail.html" class="show-card" tabindex="0" aria-label="Watch My Master Has No Tail">
+        <img src="https://cdn.pixabay.com/photo/2017/03/27/14/56/anime-2174163_1280.jpg" alt="My Master Has No Tail" class="show-poster" />
+        <h3 class="show-title">My Master Has No Tail</h3>
+        <p class="show-info">Japan | Anime | 13 Episodes</p>
+      </a>
+
+      <a href="tango.html" class="show-card" tabindex="0" aria-label="Watch Midnight Tango from Argentina">
+        <img src="https://cdn.pixabay.com/photo/2016/01/08/18/28/dance-1128974_1280.jpg" alt="Midnight Tango" class="show-poster" />
+        <h3 class="show-title">Midnight Tango</h3>
+        <p class="show-info">Argentina | Drama | 20 Episodes</p>
+      </a>
+
+      <a href="northern-lights.html" class="show-card" tabindex="0" aria-label="Watch Northern Lights Mystery from Iceland">
+        <img src="https://cdn.pixabay.com/photo/2019/09/30/19/29/northern-lights-4511621_1280.jpg" alt="Northern Lights Mystery" class="show-poster" />
+        <h3 class="show-title">Northern Lights Mystery</h3>
+        <p class="show-info">Iceland | Thriller | 10 Episodes</p>
+      </a>
+
+      <a href="savannah.html" class="show-card" tabindex="0" aria-label="Watch The Great Savannah from Kenya">
+        <img src="https://cdn.pixabay.com/photo/2018/06/10/17/39/africa-3468221_1280.jpg" alt="The Great Savannah" class="show-poster" />
+        <h3 class="show-title">The Great Savannah</h3>
+        <p class="show-info">Kenya | Documentary | 8 Episodes</p>
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 StrawberryMoonRabbit. All shows are streamed with love and respect for creators worldwide.
+  </footer>
+</body>
+</html>
